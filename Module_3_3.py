@@ -11,6 +11,9 @@ print_params(c=[1, 2, 3])
 
 values_list = [2.54, {'f': 3, 'k': 15}, 'Строка']
 values_dict = {'a': 45, 'b': (8, 9, 10), 'c': False}
+values_list_2 = [(13, 14), ['яблоко', 'груша']]
+
 
 print_params(*values_list)
 print_params(**values_dict)
+print_params(*values_list_2, 42)
