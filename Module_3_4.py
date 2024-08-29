@@ -1,12 +1,9 @@
 def single_root_words(root_word, *other_words):
     same_words = []
     for i in other_words:
-        root_word = root_word.lower()
-        i = i.lower()
-        if root_word in i:
+        if root_word.upper() in i.upper():
             same_words.append(i)
-        if i in root_word:
-            i = i.capitalize()
+        if i.upper() in root_word.upper():
             same_words.append(i)
     return same_words
 
