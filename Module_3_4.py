@@ -6,6 +6,7 @@ def single_root_words(root_word, *other_words):
         if root_word in i:
             same_words.append(i)
         if i in root_word:
+            i = i.capitalize()
             same_words.append(i)
     return same_words
 
