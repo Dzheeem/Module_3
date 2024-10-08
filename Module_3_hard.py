@@ -13,10 +13,7 @@ def calculate_structure_sum(stucture):
         total += stucture
     elif isinstance(stucture, dict):
         for key, values in stucture.items():
-            if isinstance(key, str):
-                total += calculate_structure_sum(len(key))
-            elif isinstance(key, (int, float)):
-                total += calculate_structure_sum(key)
+            total += calculate_structure_sum(key)
             total += calculate_structure_sum(values)
     elif isinstance(stucture, (tuple, list, set)):
         for items in stucture:
